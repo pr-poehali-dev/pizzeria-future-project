@@ -178,46 +178,68 @@ const Index = () => {
         </div>
       </nav>
 
-      <section id="home" className="relative py-20 md:py-32 bg-gradient-to-br from-orange-50 to-red-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+      <section id="home" className="relative py-32 md:py-48 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-red-500/10 to-orange-600/10"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmOTczMTYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE0YzMuMzEzIDAgNiAyLjY4NyA2IDZzLTIuNjg3IDYtNiA2LTYtMi42ODctNi02IDIuNjg3LTYgNi02ek0yNCA0MmMzLjMxMyAwIDYgMi42ODcgNiA2cy0yLjY4NyA2LTYgNi02LTIuNjg3LTYtNiAyLjY4Ny02IDYtNnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-40"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center animate-fade-in">
+            <div className="inline-block mb-6 px-4 py-2 bg-primary/10 rounded-full">
+              <p className="text-primary font-semibold flex items-center gap-2">
+                <Icon name="Sparkles" size={16} />
+                Акция: Каждая 3-я пицца в подарок!
+              </p>
+            </div>
+            <h2 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
               Настоящая итальянская пицца
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto">
               Приготовлено с любовью в дровяной печи. Доставка за 30 минут или пицца в подарок!
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" onClick={() => scrollToSection('menu')}>
+            <div className="flex flex-wrap gap-4 justify-center mb-16">
+              <Button size="lg" className="text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all hover:scale-105" onClick={() => scrollToSection('menu')}>
+                <Icon name="UtensilsCrossed" size={20} className="mr-2" />
                 Смотреть меню
               </Button>
-              <Button size="lg" variant="outline" onClick={() => scrollToSection('delivery')}>
+              <Button size="lg" variant="outline" className="text-lg px-8 py-6 hover:scale-105 transition-all" onClick={() => scrollToSection('delivery')}>
+                <Icon name="Truck" size={20} className="mr-2" />
                 Условия доставки
               </Button>
             </div>
-            <div className="mt-12 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-              <div className="text-center">
-                <div className="text-4xl mb-2">🔥</div>
-                <p className="font-semibold">Дровяная печь</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4 text-3xl shadow-lg">
+                  🔥
+                </div>
+                <p className="font-bold text-lg mb-1">Дровяная печь</p>
+                <p className="text-sm text-muted-foreground">Традиционная готовка</p>
               </div>
-              <div className="text-center">
-                <div className="text-4xl mb-2">⏱️</div>
-                <p className="font-semibold">30 минут</p>
+              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4 text-3xl shadow-lg">
+                  ⏱️
+                </div>
+                <p className="font-bold text-lg mb-1">30 минут</p>
+                <p className="text-sm text-muted-foreground">Быстрая доставка</p>
               </div>
-              <div className="text-center">
-                <div className="text-4xl mb-2">✨</div>
-                <p className="font-semibold">Свежие продукты</p>
+              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-105">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4 text-3xl shadow-lg">
+                  ✨
+                </div>
+                <p className="font-bold text-lg mb-1">Свежие продукты</p>
+                <p className="text-sm text-muted-foreground">Только натуральное</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="menu" className="py-20">
+      <section id="menu" className="py-24 bg-gradient-to-b from-white to-orange-50/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Наше меню</h2>
-            <p className="text-muted-foreground">Выберите свою любимую пиццу</p>
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
+              <p className="text-primary font-semibold text-sm">МЕНЮ</p>
+            </div>
+            <h2 className="text-5xl font-bold mb-4">Наше меню</h2>
+            <p className="text-xl text-muted-foreground">Выберите свою любимую пиццу</p>
           </div>
 
           <Tabs defaultValue="all" className="w-full">
@@ -235,17 +257,20 @@ const Index = () => {
                   {pizzas
                     .filter(pizza => category === 'all' || pizza.category === category)
                     .map((pizza) => (
-                      <Card key={pizza.id} className="overflow-hidden hover:shadow-lg transition-shadow animate-scale-in">
-                        <CardHeader className="p-0">
-                          <img src={pizza.image} alt={pizza.name} className="w-full h-48 object-cover" />
+                      <Card key={pizza.id} className="group overflow-hidden hover:shadow-2xl transition-all duration-300 animate-scale-in border-2 hover:border-primary/20">
+                        <CardHeader className="p-0 relative overflow-hidden">
+                          <div className="absolute top-3 right-3 z-10">
+                            <Badge className="bg-secondary shadow-lg">{pizza.price} ₽</Badge>
+                          </div>
+                          <img src={pizza.image} alt={pizza.name} className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         </CardHeader>
-                        <CardContent className="p-4">
-                          <CardTitle className="mb-2">{pizza.name}</CardTitle>
-                          <p className="text-sm text-muted-foreground mb-4">{pizza.description}</p>
-                          <p className="text-2xl font-bold text-primary">{pizza.price} ₽</p>
+                        <CardContent className="p-5">
+                          <CardTitle className="mb-3 text-xl">{pizza.name}</CardTitle>
+                          <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{pizza.description}</p>
                         </CardContent>
-                        <CardFooter className="p-4 pt-0">
-                          <Button className="w-full" onClick={() => addToCart(pizza)}>
+                        <CardFooter className="p-5 pt-0">
+                          <Button className="w-full shadow-md hover:shadow-xl transition-all group-hover:scale-105" onClick={() => addToCart(pizza)}>
                             <Icon name="ShoppingCart" size={16} className="mr-2" />
                             В корзину
                           </Button>
@@ -259,61 +284,92 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="about" className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">О нас</h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              PizzaHouse — это семейная пиццерия с 15-летней историей. Мы используем только натуральные ингредиенты 
-              и готовим каждую пиццу в настоящей дровяной печи, привезенной из Италии.
-            </p>
-            <p className="text-lg text-muted-foreground">
-              Наши повара прошли обучение у лучших итальянских мастеров, и мы гордимся тем, что создаем 
-              для вас настоящую итальянскую пиццу с душой и любовью.
-            </p>
+      <section id="about" className="py-24 bg-gradient-to-b from-orange-50/30 to-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(249,115,22,0.1),transparent_50%)]" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
+                <p className="text-primary font-semibold text-sm">О НАС</p>
+              </div>
+              <h2 className="text-5xl font-bold mb-6">История PizzaHouse</h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="space-y-6">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  PizzaHouse — это семейная пиццерия с 15-летней историей. Мы используем только натуральные ингредиенты 
+                  и готовим каждую пиццу в настоящей дровяной печи, привезенной из Италии.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Наши повара прошли обучение у лучших итальянских мастеров, и мы гордимся тем, что создаем 
+                  для вас настоящую итальянскую пиццу с душой и любовью.
+                </p>
+                <div className="flex gap-6 pt-4">
+                  <div className="text-center">
+                    <p className="text-4xl font-bold text-primary mb-1">15+</p>
+                    <p className="text-sm text-muted-foreground">лет опыта</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-4xl font-bold text-primary mb-1">50k+</p>
+                    <p className="text-sm text-muted-foreground">довольных клиентов</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-4xl font-bold text-primary mb-1">100%</p>
+                    <p className="text-sm text-muted-foreground">натуральные продукты</p>
+                  </div>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-2xl" />
+                <img src="https://cdn.poehali.dev/projects/99128641-b011-4523-9d26-76033c834c43/files/b790a349-d904-4773-8997-e09e29bef7da.jpg" alt="Наша пиццерия" className="relative rounded-2xl shadow-2xl w-full" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="delivery" className="py-20">
+      <section id="delivery" className="py-24 bg-gradient-to-b from-white to-orange-50/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Доставка</h2>
-            <p className="text-muted-foreground">Быстро и горячо к вашему порогу</p>
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
+              <p className="text-primary font-semibold text-sm">ДОСТАВКА</p>
+            </div>
+            <h2 className="text-5xl font-bold mb-4">Доставка</h2>
+            <p className="text-xl text-muted-foreground">Быстро и горячо к вашему порогу</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Clock" size={32} className="text-primary" />
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <Card className="text-center border-2 hover:border-primary/30 transition-all hover:shadow-xl group">
+              <CardContent className="pt-8 pb-8">
+                <div className="w-20 h-20 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                  <Icon name="Clock" size={36} className="text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">30 минут</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-2xl font-bold mb-3">30 минут</h3>
+                <p className="text-muted-foreground text-lg">
                   Доставка за полчаса или пицца в подарок
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="MapPin" size={32} className="text-primary" />
+            <Card className="text-center border-2 hover:border-primary/30 transition-all hover:shadow-xl group">
+              <CardContent className="pt-8 pb-8">
+                <div className="w-20 h-20 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                  <Icon name="MapPin" size={36} className="text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Зона доставки</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-2xl font-bold mb-3">Зона доставки</h3>
+                <p className="text-muted-foreground text-lg">
                   Бесплатная доставка в радиусе 5 км
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="DollarSign" size={32} className="text-primary" />
+            <Card className="text-center border-2 hover:border-primary/30 transition-all hover:shadow-xl group">
+              <CardContent className="pt-8 pb-8">
+                <div className="w-20 h-20 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                  <Icon name="DollarSign" size={36} className="text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Минимальный заказ</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-2xl font-bold mb-3">Минимальный заказ</h3>
+                <p className="text-muted-foreground text-lg">
                   От 500 ₽ для бесплатной доставки
                 </p>
               </CardContent>
@@ -322,24 +378,36 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="reviews" className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Отзывы</h2>
-            <p className="text-muted-foreground">Что говорят наши клиенты</p>
+      <section id="reviews" className="py-24 bg-gradient-to-b from-orange-50/30 to-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(234,56,76,0.1),transparent_50%)]" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
+              <p className="text-primary font-semibold text-sm">ОТЗЫВЫ</p>
+            </div>
+            <h2 className="text-5xl font-bold mb-4">Что говорят клиенты</h2>
+            <p className="text-xl text-muted-foreground">Более 10,000 довольных гостей</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {reviews.map((review) => (
-              <Card key={review.id}>
-                <CardContent className="pt-6">
-                  <div className="flex items-center gap-1 mb-4">
+              <Card key={review.id} className="border-2 hover:border-primary/20 hover:shadow-xl transition-all">
+                <CardContent className="pt-8">
+                  <div className="flex items-center gap-1 mb-6">
                     {[...Array(review.rating)].map((_, i) => (
-                      <Icon key={i} name="Star" size={16} className="text-yellow-500 fill-yellow-500" />
+                      <Icon key={i} name="Star" size={20} className="text-yellow-500 fill-yellow-500" />
                     ))}
                   </div>
-                  <p className="text-muted-foreground mb-4">{review.text}</p>
-                  <p className="font-semibold">{review.name}</p>
+                  <p className="text-muted-foreground mb-6 text-lg italic leading-relaxed">"{review.text}"</p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                      {review.name.charAt(0)}
+                    </div>
+                    <div>
+                      <p className="font-bold text-lg">{review.name}</p>
+                      <p className="text-sm text-muted-foreground">Постоянный клиент</p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -347,52 +415,109 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-20">
+      <section id="contacts" className="py-24 bg-gradient-to-b from-white to-orange-50/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-4">Контакты</h2>
-              <p className="text-muted-foreground">Свяжитесь с нами любым удобным способом</p>
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
+                <p className="text-primary font-semibold text-sm">КОНТАКТЫ</p>
+              </div>
+              <h2 className="text-5xl font-bold mb-4">Свяжитесь с нами</h2>
+              <p className="text-xl text-muted-foreground">Мы всегда рады вашим вопросам</p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Icon name="Phone" size={24} className="text-primary" />
-                </div>
-                <h3 className="font-semibold mb-2">Телефон</h3>
-                <p className="text-muted-foreground">+7 (495) 123-45-67</p>
-              </div>
+              <Card className="border-2 hover:border-primary/30 hover:shadow-xl transition-all group">
+                <CardContent className="pt-8 pb-8">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                    <Icon name="Phone" size={28} className="text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">Телефон</h3>
+                  <p className="text-muted-foreground text-lg font-medium">+7 (495) 123-45-67</p>
+                </CardContent>
+              </Card>
 
-              <div>
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Icon name="MapPin" size={24} className="text-primary" />
-                </div>
-                <h3 className="font-semibold mb-2">Адрес</h3>
-                <p className="text-muted-foreground">г. Москва, ул. Пиццы, д. 1</p>
-              </div>
+              <Card className="border-2 hover:border-primary/30 hover:shadow-xl transition-all group">
+                <CardContent className="pt-8 pb-8">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                    <Icon name="MapPin" size={28} className="text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">Адрес</h3>
+                  <p className="text-muted-foreground text-lg">г. Москва, ул. Пиццы, д. 1</p>
+                </CardContent>
+              </Card>
 
-              <div>
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Icon name="Clock" size={24} className="text-primary" />
-                </div>
-                <h3 className="font-semibold mb-2">Режим работы</h3>
-                <p className="text-muted-foreground">Ежедневно 10:00 - 23:00</p>
-              </div>
+              <Card className="border-2 hover:border-primary/30 hover:shadow-xl transition-all group">
+                <CardContent className="pt-8 pb-8">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                    <Icon name="Clock" size={28} className="text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">Режим работы</h3>
+                  <p className="text-muted-foreground text-lg">Ежедневно 10:00 - 23:00</p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
       </section>
 
-      <footer className="bg-foreground text-background py-8">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-xl">
-              🍕
+      <footer className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-4 gap-8 mb-8">
+              <div className="md:col-span-2">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-2xl">
+                    🍕
+                  </div>
+                  <span className="text-2xl font-bold">PizzaHouse</span>
+                </div>
+                <p className="text-white/70 mb-4 leading-relaxed">
+                  Настоящая итальянская пицца с 2009 года. Готовим с любовью для вас каждый день.
+                </p>
+                <div className="flex gap-3">
+                  <div className="w-10 h-10 bg-white/10 hover:bg-primary rounded-full flex items-center justify-center cursor-pointer transition-all">
+                    <Icon name="Instagram" size={20} />
+                  </div>
+                  <div className="w-10 h-10 bg-white/10 hover:bg-primary rounded-full flex items-center justify-center cursor-pointer transition-all">
+                    <Icon name="Facebook" size={20} />
+                  </div>
+                  <div className="w-10 h-10 bg-white/10 hover:bg-primary rounded-full flex items-center justify-center cursor-pointer transition-all">
+                    <Icon name="Youtube" size={20} />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4 className="font-bold text-lg mb-4">Навигация</h4>
+                <ul className="space-y-2">
+                  <li><button onClick={() => scrollToSection('menu')} className="text-white/70 hover:text-primary transition-colors">Меню</button></li>
+                  <li><button onClick={() => scrollToSection('about')} className="text-white/70 hover:text-primary transition-colors">О нас</button></li>
+                  <li><button onClick={() => scrollToSection('delivery')} className="text-white/70 hover:text-primary transition-colors">Доставка</button></li>
+                  <li><button onClick={() => scrollToSection('contacts')} className="text-white/70 hover:text-primary transition-colors">Контакты</button></li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-bold text-lg mb-4">Контакты</h4>
+                <ul className="space-y-2 text-white/70">
+                  <li className="flex items-center gap-2">
+                    <Icon name="Phone" size={16} />
+                    +7 (495) 123-45-67
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Icon name="Mail" size={16} />
+                    info@pizzahouse.ru
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="MapPin" size={16} className="mt-1" />
+                    г. Москва, ул. Пиццы, д. 1
+                  </li>
+                </ul>
+              </div>
             </div>
-            <span className="text-xl font-bold">PizzaHouse</span>
+            <div className="border-t border-white/10 pt-8 text-center">
+              <p className="text-white/50">© 2024 PizzaHouse. Все права защищены.</p>
+            </div>
           </div>
-          <p className="text-background/70">© 2024 PizzaHouse. Все права защищены.</p>
         </div>
       </footer>
     </div>
