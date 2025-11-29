@@ -28,14 +28,14 @@ const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
 
   const pizzas: Pizza[] = [
-    { id: 1, name: 'Маргарита', description: 'Томатный соус, моцарелла, базилик', price: 450, category: 'classic', image: '/placeholder.svg' },
-    { id: 2, name: 'Пепперони', description: 'Томатный соус, моцарелла, пепперони', price: 550, category: 'classic', image: '/placeholder.svg' },
-    { id: 3, name: 'Четыре сыра', description: 'Моцарелла, пармезан, горгонзола, чеддер', price: 600, category: 'classic', image: '/placeholder.svg' },
-    { id: 4, name: 'Мясная', description: 'Томатный соус, говядина, бекон, ветчина, курица', price: 650, category: 'meat', image: '/placeholder.svg' },
-    { id: 5, name: 'Барбекю', description: 'Соус барбекю, курица, бекон, лук', price: 620, category: 'meat', image: '/placeholder.svg' },
-    { id: 6, name: 'Вегетарианская', description: 'Томаты, перец, оливки, грибы, лук', price: 500, category: 'veg', image: '/placeholder.svg' },
-    { id: 7, name: 'Гавайская', description: 'Томатный соус, ветчина, ананасы, моцарелла', price: 580, category: 'special', image: '/placeholder.svg' },
-    { id: 8, name: 'Фирменная', description: 'Сливочный соус, креветки, лосось, пармезан', price: 850, category: 'special', image: '/placeholder.svg' },
+    { id: 1, name: 'Маргарита', description: 'Томатный соус, моцарелла, базилик', price: 450, category: 'classic', image: 'https://cdn.poehali.dev/projects/99128641-b011-4523-9d26-76033c834c43/files/b790a349-d904-4773-8997-e09e29bef7da.jpg' },
+    { id: 2, name: 'Пепперони', description: 'Томатный соус, моцарелла, пепперони', price: 550, category: 'classic', image: 'https://cdn.poehali.dev/projects/99128641-b011-4523-9d26-76033c834c43/files/d7cf5749-edbd-4628-ac42-82dee5534044.jpg' },
+    { id: 3, name: 'Четыре сыра', description: 'Моцарелла, пармезан, горгонзола, чеддер', price: 600, category: 'classic', image: 'https://cdn.poehali.dev/projects/99128641-b011-4523-9d26-76033c834c43/files/b8a8b32a-2519-4d30-b3af-0f918c308261.jpg' },
+    { id: 4, name: 'Мясная', description: 'Томатный соус, говядина, бекон, ветчина, курица', price: 650, category: 'meat', image: 'https://cdn.poehali.dev/projects/99128641-b011-4523-9d26-76033c834c43/files/b790a349-d904-4773-8997-e09e29bef7da.jpg' },
+    { id: 5, name: 'Барбекю', description: 'Соус барбекю, курица, бекон, лук', price: 620, category: 'meat', image: 'https://cdn.poehali.dev/projects/99128641-b011-4523-9d26-76033c834c43/files/d7cf5749-edbd-4628-ac42-82dee5534044.jpg' },
+    { id: 6, name: 'Вегетарианская', description: 'Томаты, перец, оливки, грибы, лук', price: 500, category: 'veg', image: 'https://cdn.poehali.dev/projects/99128641-b011-4523-9d26-76033c834c43/files/b8a8b32a-2519-4d30-b3af-0f918c308261.jpg' },
+    { id: 7, name: 'Гавайская', description: 'Томатный соус, ветчина, ананасы, моцарелла', price: 580, category: 'special', image: 'https://cdn.poehali.dev/projects/99128641-b011-4523-9d26-76033c834c43/files/b790a349-d904-4773-8997-e09e29bef7da.jpg' },
+    { id: 8, name: 'Фирменная', description: 'Сливочный соус, креветки, лосось, пармезан', price: 850, category: 'special', image: 'https://cdn.poehali.dev/projects/99128641-b011-4523-9d26-76033c834c43/files/d7cf5749-edbd-4628-ac42-82dee5534044.jpg' },
   ];
 
   const reviews = [
